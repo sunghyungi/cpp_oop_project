@@ -139,25 +139,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\Desktop\oop_study\BankingSystemVer01.cpp" />
-    <ClCompile Include="..\..\..\..\Desktop\oop_study\BankingSystemVer02.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\Desktop\oop_study\BankingSystemVer03.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\Desktop\oop_study\BankingSystemVer04.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\Desktop\oop_study\BankingSystemVer05.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\Desktop\oop_study\BankingSystemVer06.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
+    <None Include="hihi.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="hihi.cpp" />
+    <ClInclude Include="oop_study\Account.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="oop_study\BankingSystemVer01.cpp" />
+    <ClCompile Include="oop_study\BankingSystemVer02.cpp" />
+    <ClCompile Include="oop_study\BankingSystemVer03.cpp" />
+    <ClCompile Include="oop_study\BankingSystemVer04.cpp" />
+    <ClCompile Include="oop_study\BankingSystemVer05.cpp" />
+    <ClCompile Include="oop_study\BankingSystemVer06.cpp" />
+    <ClCompile Include="oop_study\소스1.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
