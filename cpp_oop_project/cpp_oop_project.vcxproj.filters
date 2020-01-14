@@ -34,4 +34,9 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="hihi.cpp">
+      <Filter>소스 파일</Filter>
+    </None>
+  </ItemGroup>
 </Project>
