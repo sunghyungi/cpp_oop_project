@@ -67,9 +67,9 @@ int Account::Withdraw(int money)
 
 void Account::ShowAccInfo() const
 {
-	cout << "°èÁÂID: " << accID << endl;
-	cout << "ÀÌ ¸§: " << cusName << endl;
-	cout << "ÀÜ ¾×: " << balance << endl;
+	cout << "ï¿½ï¿½ï¿½ï¿½ID: " << accID << endl;
+	cout << "ï¿½ï¿½ ï¿½ï¿½: " << cusName << endl;
+	cout << "ï¿½ï¿½ ï¿½ï¿½: " << balance << endl;
 }
 
 Account::~Account()
@@ -133,20 +133,20 @@ protected:
 void AccountHandler::ShowMenu(void) const
 {
 	cout << "-----Menu-----" << endl;
-	cout << "1. °èÁÂ°³¼³" << endl;
-	cout << "2. ÀÔ ±Ý" << endl;
-	cout << "3. Ãâ ±Ý" << endl;
-	cout << "4. °èÁÂÁ¤º¸ ÀüÃ¼ Ãâ·Â" << endl;
-	cout << "5. ÇÁ·Î±×·¥ Á¾·á" << endl;
+	cout << "1. ï¿½ï¿½ï¿½Â°ï¿½ï¿½ï¿½" << endl;
+	cout << "2. ï¿½ï¿½ ï¿½ï¿½" << endl;
+	cout << "3. ï¿½ï¿½ ï¿½ï¿½" << endl;
+	cout << "4. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½" << endl;
+	cout << "5. ï¿½ï¿½ï¿½Î±×·ï¿½ ï¿½ï¿½ï¿½ï¿½" << endl;
 }
 
 void AccountHandler::MakeAccount(void)
 {
 	int sel;
-	cout << "[°èÁÂÁ¾·ù¼±ÅÃ]" << endl;
-	cout << "1. º¸Åë¿¹±Ý°èÁÂ ";
-	cout << "2. ½Å¿ë½Å·Ú°èÁÂ " << endl;
-	cout << "¼±ÅÃ: "; cin >> sel;
+	cout << "[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½]" << endl;
+	cout << "1. ï¿½ï¿½ï¿½ë¿¹ï¿½Ý°ï¿½ï¿½ï¿½ ";
+	cout << "2. ï¿½Å¿ï¿½Å·Ú°ï¿½ï¿½ï¿½ " << endl;
+	cout << "ï¿½ï¿½ï¿½ï¿½: "; cin >> sel;
 
 	if (sel == NORMAL)
 		MakeNormalAccount;
@@ -161,11 +161,11 @@ void AccountHandler::MakeNormalAccount(void)
 	int balance;
 	int interRate;
 
-	cout << "[º¸Åë¿¹±Ý°èÁÂ °³¼³]" << endl;
-	cout << "°èÁÂID: "; cin >> id;
-	cout << "ÀÌ ¸§: "; cin >> name;
-	cout << "ÀÔ±Ý¾×: "; cin >> balance;
-	cout << "ÀÌÀÚÀ²: "; cin >> interRate;
+	cout << "[ï¿½ï¿½ï¿½ë¿¹ï¿½Ý°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½]" << endl;
+	cout << "ï¿½ï¿½ï¿½ï¿½ID: "; cin >> id;
+	cout << "ï¿½ï¿½ ï¿½ï¿½: "; cin >> name;
+	cout << "ï¿½Ô±Ý¾ï¿½: "; cin >> balance;
+	cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: "; cin >> interRate;
 	cout << endl;
 
 	accArr[accNum++] = new NormalAccount(id, balance, name, interRate);
@@ -180,12 +180,12 @@ void AccountHandler::MakeNormalAccount(void)
 	int creditLevel;
 	int LEVEL;
 
-	cout << "[½Å¿ë½Å·Ú°èÁÂ °³¼³]" << endl;
-	cout << "°èÁÂID: "; cin >> id;
-	cout << "ÀÌ ¸§: "; cin >> name;
-	cout << "ÀÔ±Ý¾×: "; cin >> balance;
-	cout << "ÀÌÀÚÀ²: "; cin >> interRate;
-	cout << "½Å¿ëµî±Þ(1toA, 2toB, 3toC): "; cin >> creditLevel;
+	cout << "[ï¿½Å¿ï¿½Å·Ú°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½]" << endl;
+	cout << "ï¿½ï¿½ï¿½ï¿½ID: "; cin >> id;
+	cout << "ï¿½ï¿½ ï¿½ï¿½: "; cin >> name;
+	cout << "ï¿½Ô±Ý¾ï¿½: "; cin >> balance;
+	cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: "; cin >> interRate;
+	cout << "ï¿½Å¿ï¿½ï¿½ï¿½(1toA, 2toB, 3toC): "; cin >> creditLevel;
 	cout << endl;
 
 	switch (creditLevel)
@@ -207,29 +207,29 @@ void AccountHandler::DepositMoney(void)
 {
 	int money;
 	int id;
-	cout << "[ÀÔ ±Ý]" << endl;
-	cout << "°èÁÂ ID: "; cin >> id;
-	cout << "ÀÔ±Ý¾×: "; cin >> money;
+	cout << "[ï¿½ï¿½ ï¿½ï¿½]" << endl;
+	cout << "ï¿½ï¿½ï¿½ï¿½ ID: "; cin >> id;
+	cout << "ï¿½Ô±Ý¾ï¿½: "; cin >> money;
 
 	for (int i = 0; i < accNum; i++)
 	{
 		if (accArr[i]->GetAccID() == id)
 		{
 			accArr[i]->Deposit(money);
-			cout << "ÀÔ±Ý¿Ï·á" << endl << endl;
+			cout << "ï¿½Ô±Ý¿Ï·ï¿½" << endl << endl;
 			return;
 		}
 	}
-	cout << "À¯È¿ÇÏÁö ¾ÊÀº ID ÀÔ´Ï´Ù." << endl << endl;
+	cout << "ï¿½ï¿½È¿ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ID ï¿½Ô´Ï´ï¿½." << endl << endl;
 }
 
 void AccountHandler::WithdrawMoney(void)
 {
 	int money;
 	int id;
-	cout << "[Ãâ ±Ý]" << endl;
-	cout << "°èÁÂID: "; cin >> id;
-	cout << "Ãâ±Ý¾×: "; cin >> money;
+	cout << "[ï¿½ï¿½ ï¿½ï¿½]" << endl;
+	cout << "ï¿½ï¿½ï¿½ï¿½ID: "; cin >> id;
+	cout << "ï¿½ï¿½Ý¾ï¿½: "; cin >> money;
 
 	for (int i = 0; i < accNum; i++)
 	{
@@ -237,14 +237,14 @@ void AccountHandler::WithdrawMoney(void)
 		{
 			if (accArr[i]->Withdraw(money) == 0)
 			{
-				cout << "ÀÜ¾×ºÎÁ·" << endl << endl;
+				cout << "ï¿½Ü¾×ºï¿½ï¿½ï¿½" << endl << endl;
 				return;
 			}
 
-			cout << "Ãâ±Ý¿Ï·á" << endl << endl;
+			cout << "ï¿½ï¿½Ý¿Ï·ï¿½" << endl << endl;
 			return;
 		}
-		cout << "À¯È¿ÇÏÁö ¾ÊÀº ID ÀÔ´Ï´Ù." << endl << endl;
+		cout << "ï¿½ï¿½È¿ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ID ï¿½Ô´Ï´ï¿½." << endl << endl;
 	}
 }
 
@@ -279,7 +279,7 @@ int main(void)
 	{
 
 		manager.ShowMenu();
-		cout << "¼±ÅÃ: ";
+		cout << "ï¿½ï¿½ï¿½ï¿½: ";
 
 		cin >> choice;
 		getchar();
