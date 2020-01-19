@@ -1,7 +1,7 @@
 #ifndef __ACCOUNT_H__
 #define __ACCOUNT_H__
 
-ckass Accout
+class Account
 {
 private:
 	int accID;

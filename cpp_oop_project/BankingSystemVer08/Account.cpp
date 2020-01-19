@@ -1,13 +1,13 @@
 #include "BankingCommonDecl.h"
 #include "Account.h"
 
-Account::Account(int ID, int money, char * name) : accID(ID), balance(ref.balance)
+Account::Account(int ID, int money, char * name) : accID(ID), balance(money)
 {
 	cusName = new char[strlen(name) + 1];
 	strcpy(cusName, name);
 }
 
-Account::Acount(const Account& ref) : accID(ref.accID), balance(ref.balance)
+Account::Account(const Account& ref) : accID(ref.accID), balance(ref.balance)
 {
 	cusName = new char[strlen(ref.cusName) + 1];
 	strcpy(cusName, ref.cusName);
@@ -42,9 +42,9 @@ int Account::Withdraw(int money)
 
 void Account::ShowAccInfo() const
 {
-	cout << "°èÁÂID: " << accID << endl;
-	cout << "ÀÌ ¸§: " << cusName << endl;
-	cout << "ÀÜ ¾×: " << balance << endl;
+	cout << "ê³„ì¢ŒID: " << accID << endl;
+	cout << "ì´ ë¦„: " << cusName << endl;
+	cout << "ìž” ì•¡: " << balance << endl;
 }
 
 Account::~Account()

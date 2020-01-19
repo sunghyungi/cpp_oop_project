@@ -6,9 +6,9 @@ BoundCheckAccountPtrArray::BoundCheckAccountPtrArray(int len) :arrlen(len)
 	arr = new ACCOUNT_PTR[len];
 }
 
-ACCOUNT_PTR& BoundCheckAccountPtrArray::operator=[](int idx)
+ACCOUNT_PTR& BoundCheckAccountPtrArray::operator[](int idx)
 {
-	if (idx < 0 || idx >= arrlen)
+	if(idx < 0 || idx >= arrlen)
 	{
 		cout << "Array index out of bound exception" << endl;
 		exit(1);

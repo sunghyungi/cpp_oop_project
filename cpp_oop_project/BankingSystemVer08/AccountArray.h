@@ -2,14 +2,14 @@
 #define __ACCOUN_ARRAY_H__
 
 #include "Account.h"
-typedef Account * ACCOUNT_PTR;
+typedef Account* ACCOUNT_PTR;
 
 class BoundCheckAccountPtrArray
 {
 private:
 	ACCOUNT_PTR * arr;
 	int arrlen;
-	BounCheckAccountPtrArray(const BoundCheckAccountPtrArray& arr) { }
+	BoundCheckAccountPtrArray(const BoundCheckAccountPtrArray& arr) { }
 	BoundCheckAccountPtrArray& operator=(const BoundCheckAccountPtrArray& arr) { }
 
 public:
